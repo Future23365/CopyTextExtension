@@ -1,0 +1,23 @@
+{
+  "name": "copy",
+  "version": "1.0",
+  "manifest_version": 3,
+  "author": "LiuSongBai",
+  "description": "当文字无法滑动时，在右键菜单提供复制按钮",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["main.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+		"contextMenus"
+	]
+}
