@@ -24,6 +24,7 @@ chrome.runtime.onMessage.addListener(
       setTimeout(() => {
         div.style.display = 'none'
       }, 1500)
+      text = text.replace(/[\u200b-\u200f\uFEFF\u202a-\u202e]/g, '')
       navigator.clipboard.writeText(text)
       text = ''
       sendResponse('复制成功')
