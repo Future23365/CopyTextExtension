@@ -5,7 +5,8 @@
   "author": "LiuSongBai",
   "description": "当文字无法滑动时，在右键菜单提供复制按钮",
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
   },
   "background": {
     "service_worker": "background.js"
